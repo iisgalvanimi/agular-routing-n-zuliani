@@ -1,0 +1,15 @@
+1.0:
+ 1) Si parla di routing in una single page application perchè può essere necessario poter raggiunge una determinata area del sito/applicazione tramite link URL, altrimenti l'unico modo sarebbe ripercorre la stessa sequenza di passaggi ogni volta per visualizzare una determinata area dell'aplicazione, ma in sostanza le routing permettono tramite le path URL di cambiare il contenuto della pagina del sito in base ai componenti.
+ 2) In NodeJS il routing ha proprio la funzione di generare pagine HTML o comunque pagine in generale. Nel caso sepcifico dell'applicazione con design HTML ogni volta che si accede ad un URL NodeJS viene fatta una HTTP GET all'URL e viene scaricato il contenuto della pagina, al contrario le Route di Angular non vengono chiamate ogni volta con una GET se le raggiungiamo dall'interno dell'aplicazione e non riscaricano ogni volta l'HTML o comunque il contenuto, ma già lo contiene l'applicazione e tutto quello che viene fatto al raggiungimento di una route è mostrarci detto contenuto.
+ 3) Un componente è Injectable nel momento in cui si desidera istanziare degli attributi nel costruttore del componente in maniera automatica alla creazione del componente.
+ 4) tramite i parametri HTTP nell'url dell'API.
+ 5) il codice OAuth viene inserito nell'intestazione della richiesta HTTP in formato JSON.
+ 6) Lo spotify service ritorna l'observable della richiesta HTTP effettuata.
+ 7) Lo spotify service si può utilizzare creando un oggetto che possa accedere alle funzioni del servizio, in questo modo possiamo utilizzare le stesse funzioni in tutti i componenti.
+ 8) I servizi contengono le funzioni "globali" che possono essere utili in diverse parti dell'applicazione. Le routing sono le vere e proprie "pagine" dell'applicazione e quindi fanno da "contenutore", tutti gli altri componenti invece hanno funzioni più specifiche a seconda del contesto.
+ 9):
+   <div *ngIf="!results.tracks || results.tracks.items.length ==0">  Fa visualizzare il div solo se l'array tracks è vuoto o null.
+   <div *ngIf="results.tracks &&  results.tracks.items.length > 0">  Fa visualizzare il div solo se l'array tracks contine elementi.
+   <div *ngFor="let t of results.tracks.items"> crea tanti div quanti sono gli elementi nell'array items e la variabile t assume il valore dell'elemento corrente estratto dall'array
+   <img src="{{ t.album.images[0].url }}" class="img-responsive"> crea un'immegine che come url ha quello contenuto nell'array images alla prima posizione nell'oggetto album dell'oggetto dell'elemento corrente estratto dall'array.
+   {{ t.artists[0].name }} stampa l'attributo name dell'oggetto contenuto alla prima posizione dell'array artists contenuto nell'oggetto t ossia l'elemento corrente dell'array.
