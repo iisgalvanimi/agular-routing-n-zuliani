@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { SpotifyService } from './spotify.service';
-import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -9,20 +6,4 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  query: string;
-  title = 'first-routed-ap';
-  obsTrack: Observable<Object>;
-  results: Object;
-  constructor(public spotify: SpotifyService, public http: HttpClient) {
-        this.spotify = new SpotifyService(http);
-  }
-
-  submit(query:HTMLInputElement): void {
-    if (!query.value) {
-      return;
-    }
-    this.query = query.value;
-    this.obsTrack = this.spotify.searchTrack(this.query);
-    this.obsTrack.subscribe((data) => this.results = data);
-  }
 }

@@ -13,3 +13,5 @@
    <div *ngFor="let t of results.tracks.items"> crea tanti div quanti sono gli elementi nell'array items e la variabile t assume il valore dell'elemento corrente estratto dall'array
    <img src="{{ t.album.images[0].url }}" class="img-responsive"> crea un'immegine che come url ha quello contenuto nell'array images alla prima posizione nell'oggetto album dell'oggetto dell'elemento corrente estratto dall'array.
    {{ t.artists[0].name }} stampa l'attributo name dell'oggetto contenuto alla prima posizione dell'array artists contenuto nell'oggetto t ossia l'elemento corrente dell'array.
+
+   
