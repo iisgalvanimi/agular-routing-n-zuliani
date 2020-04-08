@@ -5,6 +5,7 @@ import { SearchComponent } from './search/search.component';
 import { TrackComponent } from './track/track.component';
 import { AlbumComponent } from './album/album.component';
 import { ArtistComponent } from './artist/artist.component';
+import { TopartistsComponent } from './topartists/topartists.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'search', component: SearchComponent },
   { path: 'tracks/:id', component: TrackComponent },
   { path: 'albums/:id', component: AlbumComponent },
-  { path: 'artists/:id', component: ArtistComponent }
+  { path: 'artists/:id', component: ArtistComponent },
+  { path: 'topartists', component: TopartistsComponent }
 ];
 
 @NgModule({

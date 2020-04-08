@@ -21,6 +21,16 @@ export class SpotifyService {
     return obsTracks;
   }
 
+  getArtists() {
+    const url = "https://api.spotify.com/v1/artists";
+    const headers = new HttpHeaders({
+      Authorization: environment.oauthToken
+    });
+
+    let obsTracks = this.http.get(url, { headers });
+    return obsTracks;
+  }
+
   getTrack(id: string) {
     return this.requestAPI(id, "tracks");
   }
