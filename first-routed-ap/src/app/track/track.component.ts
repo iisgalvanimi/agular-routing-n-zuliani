@@ -29,7 +29,6 @@ export class TrackComponent implements OnInit {
   getRouterParam = (params: ParamMap) => {
     let trackId = params.get('id');
     console.log(trackId);
-    //spotifyServiceObs va dichiarato
     this.spotifyServiceObs = this.service.getTrack(trackId);
     this.spotifyServiceObs.subscribe((data) => this.track = data)
   }

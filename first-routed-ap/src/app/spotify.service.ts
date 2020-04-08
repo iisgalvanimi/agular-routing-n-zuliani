@@ -22,7 +22,19 @@ export class SpotifyService {
   }
 
   getTrack(id: string) {
-    const url = `https://api.spotify.com/v1/tracks/${id}`;
+    return this.requestAPI(id, "tracks");
+  }
+
+  getAlbum(id: string) {
+    return this.requestAPI(id, "albums");
+  }
+
+  getArtist(id: string) {
+    return this.requestAPI(id, "artists");
+  }
+
+  requestAPI(id: string, searchType: string){
+    const url = `https://api.spotify.com/v1/${searchType}/${id}`;
     const headers = new HttpHeaders({
       Authorization: environment.oauthToken
     });

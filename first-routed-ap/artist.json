@@ -1,0 +1,36 @@
+{
+  "external_urls": {
+    "spotify": "https://open.spotify.com/artist/6MERXsiRbur2oJZFgYRDKz"
+  },
+  "followers": {
+    "href": null,
+    "total": 448568
+  },
+  "genres": [
+    "bow pop",
+    "classify"
+  ],
+  "href": "https://api.spotify.com/v1/artists/6MERXsiRbur2oJZFgYRDKz",
+  "id": "6MERXsiRbur2oJZFgYRDKz",
+  "images": [
+    {
+      "height": 640,
+      "url": "https://i.scdn.co/image/eb0b22cc06674b560ff0ad0bdf0810041411303d",
+      "width": 640
+    },
+    {
+      "height": 320,
+      "url": "https://i.scdn.co/image/183fc263270fa9e899255d10c4f3b1110b03f169",
+      "width": 320
+    },
+    {
+      "height": 160,
+      "url": "https://i.scdn.co/image/883a4136380b02ea9d5aa554a6d10a3cc614b0c8",
+      "width": 160
+    }
+  ],
+  "name": "Vitamin String Quartet",
+  "popularity": 61,
+  "type": "artist",
+  "uri": "spotify:artist:6MERXsiRbur2oJZFgYRDKz"
+}
